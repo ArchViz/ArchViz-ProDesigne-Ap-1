@@ -15,9 +15,6 @@ body,
 html {
     width: 100%;
     height: 100%;
-    // font-family: 'Roboto', sans-serif;
-
-
 }
 
 .hover_loader_container {
@@ -142,6 +139,7 @@ html {
         background-size: 90%;
         background-position: center;
         transform: scale(1);
+        display: none;
         // filter: invert(100%);
 
         &:hover {

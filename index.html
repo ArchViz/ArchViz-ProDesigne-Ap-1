@@ -18,11 +18,8 @@
     </script>
 
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 
     <link rel="stylesheet" href="./Style/Style.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> -->
     <!-- ########################################################################################### -->
 </head>
 
@@ -54,6 +51,7 @@
             <img id="Scene-0" src="./Style/Images/Scene-0.jpg">
             <img id="Scene-2" src="./Style/Images/Scene-2.jpg">
             <img id="Scene-3" src="./Style/Images/Scene-3.jpg">
+            <img id="Scene-4" src="./Style/Images/Scene-4.jpg">
         </a-assets>
 
         <a-entity laser-controls="hand: left"
@@ -98,7 +96,7 @@
 
         </a-entity>
         <!-- Group-2. -->
-        <a-entity scale="1 1 1" rotation="0 -90 0" class="groups" id="Group-2" visible="true">
+        <a-entity scale="0 0 0" rotation="0 -90 0" class="groups" id="Group-2" visible="false">
 
             <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
                 position="-0.85939 -1.27619 3.55992" rotation="-84.23797391351901 66.08552504818428 -155.71732364506488"
@@ -114,17 +112,35 @@
                 the_dote="Name_of_dote: Dote-3 ; Group_to_activate: Group-3 ; The_rotation: 0">
             </a-plane>
 
-
-
         </a-entity>
         <!-- Group-3. -->
-        <a-entity scale="1 1 1" rotation="0 -90 0" class="groups" id="Group-3" visible="true">
+        <a-entity scale="0 0 0" rotation="0 -90 0" class="groups" id="Group-3" visible="false">
 
             <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
                 position="0.14439 -1.27619 4.32831" rotation="-87.1188057074368 -35.937058826195496 -53.55264623749265"
                 material="src: #Arrow-1; transparent:true"
                 the_dote="Name_of_dote: Dote-2  ; Group_to_activate: Group-2 ; The_rotation: 0">
             </a-plane>
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="1.55115 -1.27619 -4.08864" rotation="-87.1188057074368 -35.937058826195496 -53.55264623749265"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-4  ; Group_to_activate: Group-4 ; The_rotation: 0">
+            </a-plane>
+
+
+
+        </a-entity>
+        <!-- Group-4. -->
+        <a-entity scale="0 0 0" rotation="0 -90 0" class="groups" id="Group-4" visible="false">
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="-1.63306 -1.27619 4.43807"
+                rotation="-87.35772910800635 28.023938717643695 -117.57323139202545"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-3  ; Group_to_activate: Group-3 ; The_rotation: 0">
+            </a-plane>
+
+
 
 
         </a-entity>
@@ -199,6 +215,9 @@
                                 break;
                             case 'Dote-3':
                                 the_sky.setAttribute('src', '#Scene-3')
+                                break;
+                            case 'Dote-4':
+                                the_sky.setAttribute('src', '#Scene-4')
                                 break;
                             default:
                                 break;
