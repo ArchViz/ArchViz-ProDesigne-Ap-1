@@ -161,8 +161,8 @@ html {
     height: 1.5em;
     position: absolute;
     @include cent();
-    bottom: calc(2% + 0em);
-    right: calc(2% + 0em);
+    // bottom: calc(2% + 0em);
+    // left: calc(2% + 0em);
     z-index: 10;
     padding: .3em;
     color: #f1f1f1;
