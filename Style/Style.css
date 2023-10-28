@@ -179,7 +179,6 @@ html {
   background-position: center;
   -webkit-transform: scale(1);
           transform: scale(1);
-  display: none;
 }
 
 .a-enter-vr .a-enter-vr-button:hover {
@@ -236,6 +235,11 @@ html {
   }
   .a-enter-vr {
     background-image: url("./Images/PNG/VR-icon.png");
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .a-enter-vr .a-enter-vr-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

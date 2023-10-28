@@ -139,7 +139,7 @@ html {
         background-size: 90%;
         background-position: center;
         transform: scale(1);
-        display: none;
+        // display: none;
         // filter: invert(100%);
 
         &:hover {
@@ -194,6 +194,11 @@ html {
     .a-enter-vr {
         background-image: url('./Images/PNG/VR-icon.png');
         display: flex;
+
+        .a-enter-vr-button {
+            display: flex;
+
+        }
     }
 
     .the_gallery_container {
