@@ -13,13 +13,13 @@
         PRODESIGN Appartement Anna Marie
     </title>
 
-    <script rel=preload src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script rel=preload src="https://unpkg.com/aframe-event-set-component/dist/aframe-event-set-component.min.js">
     </script>
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 
     <link rel="stylesheet" href="./Style/Style.css">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> -->
@@ -27,9 +27,6 @@
 </head>
 
 <body>
-    <!-- <div class="the_description">
-        PRODESIGN Appartement Anna Marie
-    </div> -->
 
     <div class='hover_loader_container'>
         <div class='hover_loader'>
@@ -55,6 +52,8 @@
             <img id="Arrow-1" src="./Style/Images/PNG/Arrow-1.png">
             <img id="Scene-1" src="./Style/Images/Scene-1.jpg">
             <img id="Scene-0" src="./Style/Images/Scene-0.jpg">
+            <img id="Scene-2" src="./Style/Images/Scene-2.jpg">
+            <img id="Scene-3" src="./Style/Images/Scene-3.jpg">
         </a-assets>
 
         <a-entity laser-controls="hand: left"
@@ -79,6 +78,13 @@
                 the_dote="Name_of_dote: Dote-1  ; Group_to_activate: Group-1 ; The_rotation: 0">
             </a-plane>
 
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="0.87418 -1.69372 -4.17615" rotation="-84.86650861477754 -7.825457565896784 91.11976999083535"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-2  ; Group_to_activate: Group-2 ; The_rotation: 0">
+            </a-plane>
+
+
         </a-entity>
 
         <!-- Group-1. -->
@@ -89,6 +95,37 @@
                 material="src: #Arrow-1; transparent:true"
                 the_dote="Name_of_dote: Dote-0  ; Group_to_activate: Group-0 ; The_rotation: 0">
             </a-plane>
+
+        </a-entity>
+        <!-- Group-2. -->
+        <a-entity scale="1 1 1" rotation="0 -90 0" class="groups" id="Group-2" visible="true">
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="-0.85939 -1.27619 3.55992" rotation="-84.23797391351901 66.08552504818428 -155.71732364506488"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-0  ; Group_to_activate: Group-0 ; The_rotation: 0">
+            </a-plane>
+
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="-0.01334 -1.27619 -4.44077"
+                rotation="-87.59665250857591 -13.936625408762145 -75.57599796673124"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-3 ; Group_to_activate: Group-3 ; The_rotation: 0">
+            </a-plane>
+
+
+
+        </a-entity>
+        <!-- Group-3. -->
+        <a-entity scale="1 1 1" rotation="0 -90 0" class="groups" id="Group-3" visible="true">
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="0.14439 -1.27619 4.32831" rotation="-87.1188057074368 -35.937058826195496 -53.55264623749265"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-2  ; Group_to_activate: Group-2 ; The_rotation: 0">
+            </a-plane>
+
 
         </a-entity>
 
@@ -157,9 +194,12 @@
                             case 'Dote-1':
                                 the_sky.setAttribute('src', '#Scene-1')
                                 break;
-
-
-
+                            case 'Dote-2':
+                                the_sky.setAttribute('src', '#Scene-2')
+                                break;
+                            case 'Dote-3':
+                                the_sky.setAttribute('src', '#Scene-3')
+                                break;
                             default:
                                 break;
                         }
@@ -194,8 +234,6 @@
             }
         }
     </script>
-    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
 
 </body>
 
