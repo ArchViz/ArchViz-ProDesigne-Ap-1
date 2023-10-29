@@ -179,10 +179,10 @@ html {
   background-position: center;
   -webkit-transform: scale(1);
           transform: scale(1);
+  display: none;
 }
 
 .a-enter-vr .a-enter-vr-button:hover {
-  background-image: url("./Images/PNG/VR-icon.png");
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }

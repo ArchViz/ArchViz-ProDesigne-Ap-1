@@ -139,11 +139,9 @@ html {
         background-size: 90%;
         background-position: center;
         transform: scale(1);
-        // display: none;
-        // filter: invert(100%);
+        display: none;
 
         &:hover {
-            background-image: url('./Images/PNG/VR-icon.png');
             transform: scale(1.1);
         }
     }
@@ -215,8 +213,6 @@ html {
         grid-column-gap: .5em;
         grid-row-gap: .5em;
 
-
-        // background-color: salmon;
 
         .oneImage {
             margin: auto;
