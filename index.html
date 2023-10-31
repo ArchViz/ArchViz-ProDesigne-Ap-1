@@ -72,6 +72,8 @@
             <img id="Scene-22" src="./Style/Images/Scene-22.jpg">
             <img id="Scene-23" src="./Style/Images/Scene-23.jpg">
             <img id="Scene-24" src="./Style/Images/Scene-24.jpg">
+            <img id="Scene-25" src="./Style/Images/Scene-25.jpg">
+            <img id="Scene-26" src="./Style/Images/Scene-26.jpg">
         </a-assets>
 
         <a-entity laser-controls="hand: left"
@@ -475,7 +477,6 @@
             </a-plane>
 
 
-
         </a-entity>
         <!-- Group-24 -->
         <a-entity scale="0 0 0" rotation="0 -90 0" class="groups" id="Group-24" visible="false">
@@ -486,7 +487,37 @@
                 material="src: #Arrow-1; transparent:true"
                 the_dote="Name_of_dote: Dote-23; Group_to_activate: Group-23; The_rotation: 0">
             </a-plane>
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="-3.396 -1.88178 0.30835" rotation="-68.09316916232268 101.62208637558334 170.44405785331244"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-24; Group_to_activate: Group-24; The_rotation: 0">
+            </a-plane>
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="0.45329 -1.27608 -4.12911" rotation="-85.51223204988997 -163.86764828080084 75.06835736024533"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-26; Group_to_activate: Group-26; The_rotation: 0">
+            </a-plane>
 
+        </a-entity>
+        <!-- Group-25 -->
+        <a-entity scale="0 0 0" rotation="0 -90 0" class="groups" id="Group-26" visible="false">
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="-0.00183 -1.88178 2.62718"
+                rotation="-85.76777122651832 27.640629952701175 -116.18094394985755"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-24; Group_to_activate: Group-24; The_rotation: 0">
+            </a-plane>
+
+        </a-entity>
+        <!-- Group-26 -->
+        <a-entity scale="0 0 0" rotation="0 -90 0" class="groups" id="Group-25" visible="false">
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="-0.3007 -1.88178 4.36186" rotation="-85.76777122651832 27.640629952701175 -116.18094394985755"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-24; Group_to_activate: Group-24; The_rotation: 0">
+            </a-plane>
 
         </a-entity>
 
@@ -529,7 +560,6 @@
                             .querySelectorAll(`img[src='${url}']`)
                             .forEach(the_img => (the_img.src = url));
                     }
-
                     if (the_img.condition) {
                         console.log('Ok');
                     } else {
@@ -537,10 +567,6 @@
                         console.log('not Ok');
                     }
                     //################################
-                    // the_sky.setAttribute('rotation', `0 ${TheRotation} 0`)
-
-
-
                     theBlachHover.style.transitionDelay = '0s , 0s';
                     theBlachHover.style.opacity = '1';
                     theBlachHover.style.height = '100vh';
@@ -623,6 +649,12 @@
                                 break;
                             case 'Dote-24':
                                 the_sky.setAttribute('src', '#Scene-24')
+                                break;
+                            case 'Dote-25':
+                                the_sky.setAttribute('src', '#Scene-25')
+                                break;
+                            case 'Dote-26':
+                                the_sky.setAttribute('src', '#Scene-26')
                                 break;
                             default:
                                 break;
