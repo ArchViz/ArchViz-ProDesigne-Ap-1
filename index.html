@@ -71,6 +71,7 @@
             <img id="Scene-21" src="./Style/Images/Scene-21.jpg">
             <img id="Scene-22" src="./Style/Images/Scene-22.jpg">
             <img id="Scene-23" src="./Style/Images/Scene-23.jpg">
+            <img id="Scene-24" src="./Style/Images/Scene-24.jpg">
         </a-assets>
 
         <a-entity laser-controls="hand: left"
@@ -467,6 +468,25 @@
                 material="src: #Arrow-1; transparent:true"
                 the_dote="Name_of_dote: Dote-22; Group_to_activate: Group-22; The_rotation: 0">
             </a-plane>
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="-0.22785 -1.35779 -2.6281" rotation="-86.24790985883794 2.5261709187317996 -91.00804322078483"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-24; Group_to_activate: Group-24; The_rotation: 0">
+            </a-plane>
+
+
+
+        </a-entity>
+        <!-- Group-24 -->
+        <a-entity scale="0 0 0" rotation="0 -90 0" class="groups" id="Group-24" visible="false">
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="-0.00183 -1.88178 2.62718"
+                rotation="-85.76777122651832 27.640629952701175 -116.18094394985755"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-23; Group_to_activate: Group-23; The_rotation: 0">
+            </a-plane>
+
 
         </a-entity>
 
@@ -600,6 +620,9 @@
                                 break;
                             case 'Dote-23':
                                 the_sky.setAttribute('src', '#Scene-23')
+                                break;
+                            case 'Dote-24':
+                                the_sky.setAttribute('src', '#Scene-24')
                                 break;
                             default:
                                 break;
