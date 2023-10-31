@@ -170,7 +170,7 @@ html {
     background-image: url('./Images/PNG/favicon.png');
     background-repeat: no-repeat;
     background-size: 100%;
-
+    -webkit-user-select: none;
 
     &:hover {
         transform: scale(1.1);
