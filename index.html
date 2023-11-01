@@ -79,6 +79,9 @@
             <img id="Scene-29" src="./Style/Images/Scene-29.jpg">
             <img id="Scene-30" src="./Style/Images/Scene-30.jpg">
             <img id="Scene-31" src="./Style/Images/Scene-31.jpg">
+            <img id="Scene-32" src="./Style/Images/Scene-32.jpg">
+            <img id="Scene-33" src="./Style/Images/Scene-33.jpg">
+            <img id="Scene-34" src="./Style/Images/Scene-34.jpg">
         </a-assets>
 
         <a-entity laser-controls="hand: left"
@@ -242,6 +245,14 @@
                 material="src: #Arrow-1; transparent:true"
                 the_dote="Name_of_dote: Dote-4  ; Group_to_activate: Group-4 ; The_rotation: 0">
             </a-plane>
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="-0.67467 -1.27619 -3.54256"
+                rotation="-85.31112386379905 60.14337975488252 -149.75054116657253"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-32 ; Group_to_activate: Group-32 ; The_rotation: 0">
+            </a-plane>
+
+
 
         </a-entity>
         <!-- Group-9 -->
@@ -614,6 +625,56 @@
             </a-plane>
 
         </a-entity>
+        <!-- Group-32 -->
+        <a-entity scale="0 0 0" rotation="0 -90 0" class="groups" id="Group-32" visible="false">
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="0.03727 -1.96226 5.60858" rotation="-85.76777122651832 27.640629952701175 -116.18094394985755"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-4; Group_to_activate: Group-4; The_rotation: 0">
+            </a-plane>
+
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="3.31551 -2.08264 -0.21295" rotation="-60.60518373775796 -82.34549431620192 -5.154328324996886"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-33; Group_to_activate: Group-33; The_rotation: 0">
+            </a-plane>
+
+
+
+        </a-entity>
+        <!-- Group-33 -->
+        <a-entity scale="0 0 0" rotation="0 -90 0" class="groups" id="Group-33" visible="false">
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="-3.44901 -1.96226 0.31993" rotation="-53.53030088348255 83.68506964121778 -173.39077979367025"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-32; Group_to_activate: Group-32; The_rotation: 0">
+            </a-plane>
+
+
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="-0.14143 -1.52675 -4.58256"
+                rotation="-85.76777122651832 27.640629952701175 -116.18094394985755"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-34; Group_to_activate: Group-34; The_rotation: 0">
+            </a-plane>
+
+        </a-entity>
+        <!-- Group-34 -->
+        <a-entity scale="0 0 0" rotation="0 -90 0" class="groups" id="Group-34" visible="false">
+
+            <a-plane data-clickable scale='0.9 0.9 0.9' opacity='.5' class="pintings clickable"
+                position="-0.42329 -1.96226 4.3631" rotation="-85.76777122651832 27.640629952701175 -116.18094394985755"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-33; Group_to_activate: Group-33; The_rotation: 0">
+            </a-plane>
+
+
+
+        </a-entity>
 
         <!-- ############################################################ -->
         <!-- ############################################################ -->
@@ -631,18 +692,17 @@
         let img_1 = document.querySelector('#Scene-1')
 
         //############################################
-        // const setStrat = (theStrat) => {
-        //     the_sky.setAttribute('src', `#Scene-${theStrat}`)
-        //     let the_group_to_activate = document.querySelector(`#Group-${theStrat}`)
-
-        //     groups.forEach(group => {
-        //         group.setAttribute('visible', 'false')
-        //         group.setAttribute('scale', '0 0 0')
-        //     });
-        //     the_group_to_activate.setAttribute('visible', 'true')
-        //     the_group_to_activate.setAttribute('scale', '1 1 1')
-        // }
-        // setStrat()
+        const setStrat = (theStrat) => {
+            the_sky.setAttribute('src', `#Scene-${theStrat}`)
+            let the_group_to_activate = document.querySelector(`#Group-${theStrat}`)
+            groups.forEach(group => {
+                group.setAttribute('visible', 'false')
+                group.setAttribute('scale', '0 0 0')
+            });
+            the_group_to_activate.setAttribute('visible', 'true')
+            the_group_to_activate.setAttribute('scale', '1 1 1')
+        }
+        setStrat(8)
         //############################################
         AFRAME.registerComponent('the_dote', {
             schema: { Name_of_dote: { type: 'string', default: '#Name', }, Group_to_activate: { type: 'string', default: '#Position', }, The_rotation: { type: 'string', default: '0', } },
@@ -777,6 +837,15 @@
                                 break;
                             case 'Dote-31':
                                 the_sky.setAttribute('src', '#Scene-31')
+                                break;
+                            case 'Dote-32':
+                                the_sky.setAttribute('src', '#Scene-32')
+                                break;
+                            case 'Dote-33':
+                                the_sky.setAttribute('src', '#Scene-33')
+                                break;
+                            case 'Dote-34':
+                                the_sky.setAttribute('src', '#Scene-34')
                                 break;
                             default:
                                 break;
